@@ -1,0 +1,15 @@
+﻿#两数和#
+from typing import List #规定输入类型
+class Solution(object):
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        n=len(nums)
+        i=1
+        for x in nums:
+            j=0
+            for y in nums[i:]:
+                if x+y==target:
+                    return [i-1,i+j]
+                j=j+1
+            i=i+1
+            if i>=n:
+               break
